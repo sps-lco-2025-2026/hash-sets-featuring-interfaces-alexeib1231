@@ -1,5 +1,5 @@
-﻿namespace HashSet.Lib
-{
+﻿namespace HashSet.Lib;
+
     public interface IHashSet<T> 
         where T : SPSStudent, IEquatable<T>
     {
@@ -14,4 +14,22 @@
         string Year { get; }
         string Tutor { get; }
     }
-}
+
+
+public class SPSStudent
+{
+    string _name;
+    int _year;
+    string _initials;
+
+    public override string ToString()
+    {
+        return (_name, _year, _initials);
+    }
+    public override int GetHashCode()
+    {
+        
+    }
+} 
+
+public class IHashSet<T>
